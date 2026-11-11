@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interest Rate Calculator</title>
+    <meta name="description" content="Free online interest rate calculator. Calculate simple and compound interest on your savings or loans instantly.">
+    <meta name="keywords" content="interest rate calculator, compound interest, simple interest, loan calculator">
+    <meta name="author" content="Interest Rate Calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/interest-rate-calculator/">
+    <meta property="og:title" content="Interest Rate Calculator">
+    <meta property="og:description" content="Estimate how your savings or loan balance grows with compound interest.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Interest Rate Calculator home">
+        <span class="wordmark-icon" aria-hidden="true">%</span>
+        <span>Rate / Return</span>
+      </a>
+      <span class="header-note">A clearer picture of growth</span>
+    </header>
+
+    <main>
+      <section class="calculator" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow">COMPOUND INTEREST</p>
+          <h1 id="page-title">Make your next move count.</h1>
+          <p class="intro-copy">See what time and interest could do for your money.</p>
+        </div>
+
+        <form id="calculator-form" novalidate>
+          <div class="field">
+            <label for="principal">Starting amount</label>
+            <div class="input-wrap has-prefix">
+              <span class="input-affix" aria-hidden="true">$</span>
+              <input id="principal" name="principal" type="number" min="0" step="any" placeholder="10,000" inputmode="decimal" required>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="rate">Annual interest rate</label>
+              <div class="input-wrap has-suffix">
+                <input id="rate" name="rate" type="number" min="0" step="any" placeholder="5" inputmode="decimal" required>
+                <span class="input-affix" aria-hidden="true">%</span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="years">Time invested</label>
+              <div class="input-wrap has-suffix">
+                <input id="years" name="years" type="number" min="0" step="any" placeholder="10" inputmode="decimal" required>
+                <span class="input-affix">years</span>
+              </div>
+            </div>
+          </div>
+
+          <button id="calculate" type="submit">
+            <span>Calculate growth</span>
+            <span class="button-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+        </form>
+
+        <output id="result" class="result" for="principal rate years" aria-live="polite">
+          <span class="result-label">YOUR PROJECTED BALANCE</span>
+          <span class="result-value">Enter your figures to get started</span>
+        </output>
+        <p class="disclaimer">An estimate for illustration only. Actual returns may vary.</p>
+      </section>
+
+      <aside class="formula-note" aria-label="Calculation method">
+        <span class="formula-mark" aria-hidden="true">ƒ</span>
+        <p><strong>Compounding makes a difference.</strong><br>Interest is calculated on your starting amount and accumulated growth.</p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <span>Interest Rate Calculator</span>
+      <span>Plan thoughtfully. Grow steadily.</span>
+    </footer>
+
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
